@@ -1,4 +1,4 @@
-#Project Title: Android-Forensic-Image-Analysis
+# Project Title: Android-Forensic-Image-Analysis
 
 ## Project Summary  
 This project focuses on the forensic examination of an Android device image. The investigation involved artifact recovery, timeline creation, deleted data extraction, and reporting. Using recognized forensic tools, the image was parsed to identify SMS, call logs, browsing history, contacts, and application data. The outcome is a formal investigative report that demonstrates an understanding of mobile forensics techniques and digital evidence handling.
