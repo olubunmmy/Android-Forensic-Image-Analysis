@@ -37,7 +37,7 @@ This project focuses on the forensic examination of an Android device image. The
 1. Installed Oracle VirtualBox from [https://www.virtualbox.org](https://www.virtualbox.org)  
 2. Downloaded Ubuntu ISO from [https://ubuntu.com/download/desktop](https://ubuntu.com/download/desktop)  
 3. Created a new VM:
-   - Name: `ForensicLab`
+   -Name: `ForensicLab`
    - OS Type: Ubuntu (64-bit)
    - RAM: Minimum 4 GB
    - Storage: 25 GB (dynamically allocated)
