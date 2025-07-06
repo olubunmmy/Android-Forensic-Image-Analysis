@@ -28,9 +28,9 @@ The objectives of this project were to:
 | Component         | Description |
 |------------------|-------------|
 | Host OS        | Windows 10 |
-| Virtual Machine | Ubuntu 22.04 LTS |
+| Virtual Machine | Ubuntu 25.04 LTS |
 | Virtualization | Oracle VirtualBox |
-| Forensic Tool   | Autopsy 4.19 + SleuthKit |
+| Forensic Tool   | Autopsy  + SleuthKit |
 | Disk Image      | `nexus.img` (Android 8 – Oreo) |
 | Image Source    | [DFRWS/NIST Nexus Image](https://dfrws.org/download/android-images/Nexus4_Oreo/nexus.img) |
 
