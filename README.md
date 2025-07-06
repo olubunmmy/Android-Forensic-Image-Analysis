@@ -9,11 +9,25 @@ This project focuses on the forensic examination of an Android device image. The
 
 ## Objectives  
 
-- Set up a forensic lab using Oracle VirtualBox and Ubuntu
-- Install and configure Autopsy with SleuthKit
+The objectives of this project were to:
+
+- Set up a virtual forensic lab environment using Oracle VirtualBox and Ubuntu
+- Install and configure Autopsy with SleuthKit on the virtual machine 
 - Load and analyze a real Android image file
-- Extract and interpret relevant user artifacts
+- Extract and interpret key digital artifacts such as:
+
+SMS messages
+
+Call logs
+
+Browser history
+
+Location data
+
+Media files
 - Demonstrate forensic integrity and reporting standards
+- Document findings in a structured and professional forensic report
+
 
   
  ---
@@ -47,7 +61,17 @@ This project focuses on the forensic examination of an Android device image. The
 
 ---
 ### Step 2: Autopsy Installation
+Thank you for the clarification. Below is a well-written **summary specifically for the Autopsy installation** section of your project report. It presents what you did, how you did it, and why it mattered, all in a **clear, concise, past-tense format**:
 
+---
+
+## Summary of Autopsy Installation
+
+Autopsy was successfully installed on an Ubuntu virtual machine running inside Oracle VirtualBox on a Windows 10 host system. The goal of this installation was to create a functional and reliable environment for performing Android forensic investigations.
+
+The installation process began with updating the system's package lists using the `apt` package manager. Autopsy and its core dependency, The Sleuth Kit, were installed directly from the Ubuntu repositories. Once installed, Autopsy was launched via the terminal, which started a local web server and provided access to its browser-based interface at `http://127.0.0.1:9999/autopsy`.
+
+To ensure proper functionality, a test case was created, and several default ingest modules were successfully loaded. The tool performed efficiently within the allocated system resources, confirming that the forensic lab was ready for analysis tasks.
 
 
 ---
