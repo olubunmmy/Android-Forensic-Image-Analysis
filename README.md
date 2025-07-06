@@ -37,7 +37,7 @@ The objectives of this project were to:
 
 ##  Step-by-Step Methodology
 
-###  Step 1: Virtual Lab Setup
+###   Virtual Lab Setup
 1. Installed Oracle VirtualBox from [https://www.virtualbox.org](https://www.virtualbox.org)  
 2. Downloaded Ubuntu ISO from [https://ubuntu.com/download/desktop](https://ubuntu.com/download/desktop)  
 3. Created a new VM:
@@ -49,20 +49,24 @@ The objectives of this project were to:
 
 ---
 
-### Step 2:  Autopsy Installation
+###  Autopsy Installation
 
 Autopsy was successfully installed on an Ubuntu virtual machine running inside Oracle VirtualBox on a Windows 10 host system. The goal of this installation was to create a functional and reliable environment for performing Android forensic investigations.
 
-The installation process began with updating the system's package lists using the `apt` package manager. Autopsy and its core dependency, The Sleuth Kit, were installed directly from the Ubuntu repositories. Once installed, Autopsy was launched via the terminal, which started a local web server and provided access to its browser-based interface.
+The installation process began with updating the system's package lists using the `apt` package manager. Autopsy and its core dependency, The Sleuth Kit, were installed directly from the Ubuntu repositories.
+
 
 
 ---
-### Step 3: Image Acquisition and Case Setup
 
-The Android forensic image was downloaded and Autopsy was launched from the terminal, opening its web-based interface. A new case was created, and the Android image file was added as a raw disk image data source.
+### Case Initialization and Image Ingestion
+
+Autopsy was successfully launched from the terminal, initiating its browser-based graphical interface. A new forensic case was created within the interface, and the Android image file was added as a raw disk image data source. This marked the beginning of the forensic analysis,it enabled Autopsy to parse the image and extract relevant mobile artifacts using its built-in modules.
+
+---
 
 
-#### Step 4: Selected ingest modules:
+####  Selected ingest modules:
 
 - File Type Identification
 
@@ -78,7 +82,7 @@ The Android forensic image was downloaded and Autopsy was launched from the term
 
 ---
 
-### Step 5: Evidence Analysis
+###  Evidence Analysis
 #### Call Logs
 - File: contacts2.db
 
