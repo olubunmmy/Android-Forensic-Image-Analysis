@@ -49,7 +49,7 @@ The objectives of this project were to:
 
 ---
 
-## Autopsy Installation
+### Step 2:  Autopsy Installation
 
 Autopsy was successfully installed on an Ubuntu virtual machine running inside Oracle VirtualBox on a Windows 10 host system. The goal of this installation was to create a functional and reliable environment for performing Android forensic investigations.
 
@@ -62,7 +62,7 @@ The installation process began with updating the system's package lists using th
 The Android forensic image was downloaded and Autopsy was launched from the terminal, opening its web-based interface. A new case was created, and the Android image file was added as a raw disk image data source.
 
 
-#### 4.Selected ingest modules:
+#### Step 4: Selected ingest modules:
 
 - File Type Identification
 
@@ -78,7 +78,7 @@ The Android forensic image was downloaded and Autopsy was launched from the term
 
 ---
 
-### Evidence Analysis
+### Step 5: Evidence Analysis
 #### Call Logs
 - File: contacts2.db
 
