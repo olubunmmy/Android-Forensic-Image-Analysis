@@ -14,17 +14,7 @@ The objectives of this project were to:
 - Set up a virtual forensic lab environment using Oracle VirtualBox and Ubuntu
 - Install and configure Autopsy with SleuthKit on the virtual machine 
 - Load and analyze a real Android image file
-- Extract and interpret key digital artifacts such as:
-
-SMS messages
-
-Call logs
-
-Browser history
-
-Location data
-
-Media files
+- Extract and interpret key digital artifacts 
 - Demonstrate forensic integrity and reporting standards
 - Document findings in a structured and professional forensic report
 
