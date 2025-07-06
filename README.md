@@ -43,7 +43,6 @@ This project focuses on the forensic examination of an Android device image. The
    - Storage: 25 GB (dynamically allocated)
 4. Installed Ubuntu in the VM and completed the setup
 
-   
 ---
 ### Step 2: Autopsy Installation
 
