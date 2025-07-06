@@ -53,8 +53,7 @@ sudo apt update && sudo apt install autopsy sleuthkit -y
 autopsy
 
 ---
-
-### Step 3.Image Acquisition and Loading
+### Step 3: Image Acquisition and Loading
 
  Downloaded the Android forensic image using:
 
