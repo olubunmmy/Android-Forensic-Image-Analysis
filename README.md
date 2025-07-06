@@ -7,8 +7,8 @@ This project focuses on the forensic examination of an Android device image. The
 
 ## Objectives  
 
-- Set up a forensic lab using Oracle VirtualBox and Ubuntu
-- Install and configure Autopsy with SleuthKit
+ -Set up a forensic lab using Oracle VirtualBox and Ubuntu
+-Install and configure Autopsy with SleuthKit
 - Load and analyze a real Android image file
 - Extract and interpret relevant user artifacts
 - Demonstrate forensic integrity and reporting standards
