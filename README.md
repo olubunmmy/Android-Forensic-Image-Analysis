@@ -53,34 +53,14 @@ The objectives of this project were to:
 
 Autopsy was successfully installed on an Ubuntu virtual machine running inside Oracle VirtualBox on a Windows 10 host system. The goal of this installation was to create a functional and reliable environment for performing Android forensic investigations.
 
-The installation process began with updating the system's package lists using the `apt` package manager. Autopsy and its core dependency, The Sleuth Kit, were installed directly from the Ubuntu repositories. Once installed, Autopsy was launched via the terminal, which started a local web server and provided access to its browser-based interface at `http://127.0.0.1:9999/autopsy`.
-
-To ensure proper functionality, a test case was created, and several default ingest modules were successfully loaded. The tool performed efficiently within the allocated system resources, confirming that the forensic lab was ready for analysis tasks.
+The installation process began with updating the system's package lists using the `apt` package manager. Autopsy and its core dependency, The Sleuth Kit, were installed directly from the Ubuntu repositories. Once installed, Autopsy was launched via the terminal, which started a local web server and provided access to its browser-based interface.
 
 
 ---
-### Step 3: Image Acquisition and Loading
+### Step 3: Image Acquisition and Case Setup
 
- Downloaded the Android forensic image using:
+The Android forensic image was downloaded and Autopsy was launched from the terminal, opening its web-based interface. A new case was created, and the Android image file was added as a raw disk image data source.
 
-bash
-Copy
-Edit
-
-
-#### 1. Launched Autopsy
-
-#### 2. Created a new case:
-
-- Name: Android Nexus Investigation
-
-- Examiner: Adesanmi bunmi
-
-#### 3. Added the data source:
-
-- Type: Disk Image (Raw format)
-
-- File: nexus.img
 
 #### 4.Selected ingest modules:
 
@@ -110,7 +90,7 @@ Edit
 
 - Type: Outgoing
 
-- Timestamp: 2020-01-15 11:32:00
+- Timestamp: 2025-01-15 11:32:00
 
 #### SMS Messages
 - File: mmssms.db
