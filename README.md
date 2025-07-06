@@ -60,12 +60,8 @@ Media files
 4. Installed Ubuntu in the VM and completed the setup
 
 ---
-### Step 2: Autopsy Installation
-Thank you for the clarification. Below is a well-written **summary specifically for the Autopsy installation** section of your project report. It presents what you did, how you did it, and why it mattered, all in a **clear, concise, past-tense format**:
 
----
-
-## Summary of Autopsy Installation
+## Autopsy Installation
 
 Autopsy was successfully installed on an Ubuntu virtual machine running inside Oracle VirtualBox on a Windows 10 host system. The goal of this installation was to create a functional and reliable environment for performing Android forensic investigations.
 
