@@ -2,7 +2,9 @@
 
 
 ## Project Overview
+
 This project focuses on the forensic examination of an Android device image. The investigation involved artifact recovery, timeline creation, deleted data extraction, and reporting. Using recognized forensic tools, the image was parsed to identify SMS, call logs, browsing history, contacts, and application data. The outcome is a formal investigative report that demonstrates an understanding of mobile forensics techniques and digital evidence.
+
 ---
 
 ## Objectives  
@@ -37,7 +39,7 @@ This project focuses on the forensic examination of an Android device image. The
 1. Installed Oracle VirtualBox from [https://www.virtualbox.org](https://www.virtualbox.org)  
 2. Downloaded Ubuntu ISO from [https://ubuntu.com/download/desktop](https://ubuntu.com/download/desktop)  
 3. Created a new VM:
-   -Name: `ForensicLab`
+   - Name: `ForensicLab`
    - OS Type: Ubuntu (64-bit)
    - RAM: Minimum 4 GB
    - Storage: 25 GB (dynamically allocated)
@@ -62,71 +64,71 @@ wget https://dfrws.org/download/android-images/Nexus4_Oreo/nexus.img
 
 #### 2. Created a new case:
 
--Name: Android Nexus Investigation
+- Name: Android Nexus Investigation
 
--Examiner: Adesanmi bunmi
+- Examiner: Adesanmi bunmi
 
 #### 3. Added the data source:
 
--Type: Disk Image (Raw format)
+- Type: Disk Image (Raw format)
 
--File: nexus.img
+- File: nexus.img
 
 #### 4.Selected ingest modules:
 
--File Type Identification
+- File Type Identification
 
--Android Analyzer
+- Android Analyzer
 
--Communications (SMS, Call Logs)
+- Communications (SMS, Call Logs)
 
--EXIF Metadata Parser
+- EXIF Metadata Parser
 
--Web History
+- Web History
 
--Keyword Search
+- Keyword Search
 
 ---
 
 ### Evidence Analysis
 #### Call Logs
--File: contacts2.db
+- File: contacts2.db
 
--Total entries recovered: 14 (including 4 deleted)
+- Total entries recovered: 14 (including 4 deleted)
 
--Sample entry:
+- Sample entry:
 
--Number: +1234567890
+- Number: +1234567890
 
--Type: Outgoing
+- Type: Outgoing
 
--Timestamp: 2020-01-15 11:32:00
+- Timestamp: 2020-01-15 11:32:00
 
 #### SMS Messages
--File: mmssms.db
+- File: mmssms.db
 
--Total messages recovered: 22 (6 deleted)
+- Total messages recovered: 22 (6 deleted)
 
 ---
 
 #### Location History
--Files: location.db, wifi_cache
+- Files: location.db, wifi_cache
 
--Coordinates found: -33.9249, 18.4241
+- Coordinates found: -33.9249, 18.4241
 
--Timestamp: 2020-01-16
+- Timestamp: 2020-01-16
 
 #### Browser and App History
--Path: /data/data/com.android.chrome/
+- Path: /data/data/com.android.chrome/
 
 #### Findings:
 
--Visited sites: mail.google.com, youtube.com, facebook.com
+- Visited sites: mail.google.com, youtube.com, facebook.com
 
--Recovered search terms, cache files, and browsing history
+- Recovered search terms, cache files, and browsing history
 
 #### Media Files
--Path: /sdcard/DCIM/Camera/
+- Path: /sdcard/DCIM/Camera/
 
 -Recovered 42 images (5 deleted)
 
