@@ -63,8 +63,6 @@ The installation process began with updating the system's package lists using th
 
 Autopsy was successfully launched from the terminal, initiating its browser-based graphical interface. A new forensic case was created within the interface, and the Android image file was added as a raw disk image data source. This marked the beginning of the forensic analysis,it enabled Autopsy to parse the image and extract relevant mobile artifacts using its built-in modules.
 
----
-
 
 ####  Selected ingest modules:
 
