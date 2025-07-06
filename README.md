@@ -32,7 +32,7 @@ The objectives of this project were to:
 | Virtualization | Oracle VirtualBox |
 | Forensic Tool   | Autopsy  + SleuthKit |
 | Disk Image      | `nexus.img` (Android 8 – Oreo) |
-| Image Source    | [DFRWS/NIST Nexus Image](https://dfrws.org/download/android-images/Nexus4_Oreo/nexus.img) |
+
 
 
 ---
@@ -68,7 +68,7 @@ To ensure proper functionality, a test case was created, and several default ing
 bash
 Copy
 Edit
-wget https://dfrws.org/download/android-images/Nexus4_Oreo/nexus.img
+
 
 #### 1. Launched Autopsy
 
