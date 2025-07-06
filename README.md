@@ -188,7 +188,7 @@ Autopsy was successfully launched from the terminal, initiating its browser-base
 
 This Android forensic investigation project successfully achieved its objectives by simulating a real-world digital investigation within a controlled virtual lab environment. The project began with the setup of a fully functional forensic lab using Oracle VirtualBox and Ubuntu, followed by the installation and configuration of Autopsy and SleuthKit—validating the ability to build a practical and scalable investigation workspace.
 
-Through the acquisition and analysis of the `nexus.img` Android image, the investigation demonstrated proficiency in identifying and extracting key user artifacts including SMS messages, call logs, GPS locations, browser history, media content, and deleted files. Each step—from loading the image, selecting appropriate ingest modules, to analyzing Android-specific artifacts—was conducted in a forensically sound manner with proper evidence integrity checks and audit logging.
+Through the acquisition and analysis of the  Android image, the investigation demonstrated proficiency in identifying and extracting key user artifacts including SMS messages, call logs, GPS locations, browser history, media content, and deleted files. Each step—from loading the image, selecting appropriate ingest modules, to analyzing Android-specific artifacts—was conducted in a forensically sound manner with proper evidence integrity checks and audit logging.
 
 In addition, this project reinforced critical cybersecurity and GRC skills, including:
 
