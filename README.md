@@ -1,13 +1,8 @@
- # Project Title: Android-Forensic-Image-Analysis
+ # Project Title: Digital Forensic Analysis of an Android Device Image using Autopsy
 
-## Project Summary  
-This project focuses on the forensic examination of an Android device image. The investigation involved artifact recovery, timeline creation, deleted data extraction, and reporting. Using recognized forensic tools, the image was parsed to identify SMS, call logs, browsing history, contacts, and application data. The outcome is a formal investigative report that demonstrates an understanding of mobile forensics techniques and digital evidence handling.
 
----
-
-## Project Overview  
-This project simulates a mobile forensic case involving the analysis of a digital Android image. It documents the procedure from image acquisition through evidence extraction to formal reporting.
-
+## Project Overview
+This project focuses on the forensic examination of an Android device image. The investigation involved artifact recovery, timeline creation, deleted data extraction, and reporting. Using recognized forensic tools, the image was parsed to identify SMS, call logs, browsing history, contacts, and application data. The outcome is a formal investigative report that demonstrates an understanding of mobile forensics techniques and digital evidence.
 ---
 
 ## Objectives  
@@ -39,209 +34,182 @@ This project simulates a mobile forensic case involving the analysis of a digita
 ##  Step-by-Step Methodology
 
 ###  Step 1: Virtual Lab Setup
-
-1. **Install Oracle VirtualBox**  
-   Download: [https://www.virtualbox.org](https://www.virtualbox.org)
-
-2. **Download Ubuntu ISO**  
-   Ubuntu 22.04: [https://ubuntu.com/download/desktop](https://ubuntu.com/download/desktop)
-
-3. **Create and Configure the VM**  
+1. Installed Oracle VirtualBox from [https://www.virtualbox.org](https://www.virtualbox.org)  
+2. Downloaded Ubuntu ISO from [https://ubuntu.com/download/desktop](https://ubuntu.com/download/desktop)  
+3. Created a new VM:
    - Name: `ForensicLab`
-   - Type: Linux (Ubuntu 64-bit)
-   - RAM: 4 GB
-   - HDD: 25 GB (dynamically allocated)
+   - OS Type: Ubuntu (64-bit)
+   - RAM: Minimum 4 GB
+   - Storage: 25 GB (dynamically allocated)
+4. Installed Ubuntu in the VM and completed the setup
 
-4. **Install Ubuntu on the VM**  
-   Boot with ISO and complete the OS setup
+   
+---
+### Step 2: Autopsy Installation
+
+Opened a terminal in Ubuntu and ran:
+
+```bash
+sudo apt update && sudo apt install autopsy sleuthkit -y
+autopsy
 
 ---
 
-###  Step 2: Install Autopsy on Ubuntu
+### Step 3.Image Acquisition and Loading
 
-1. **Update system and install tools**
-```bash
-sudo apt update && sudo apt install autopsy sleuthkit -y
-
-## Forensic Procedure
-Step 3: Acquire and Load Forensic Image
-Download Android image
+ Downloaded the Android forensic image using:
 
 bash
 Copy
 Edit
 wget https://dfrws.org/download/android-images/Nexus4_Oreo/nexus.img
-Open Autopsy and:
 
-Create New Case: Android Nexus Investigation
+#### 1. Launched Autopsy
 
-Add Data Source: nexus.img
+#### 2. Created a new case:
 
-Select Ingest Modules:
+-Name: Android Nexus Investigation
 
-File Metadata
+-Examiner: Adesanmi bunmi
 
-Keyword Search
+#### 3. Added the data source:
 
-Android Analyzer
+-Type: Disk Image (Raw format)
 
-Communications
+-File: nexus.img
 
-EXIF Parser
+#### 4.Selected ingest modules:
 
-Web History
+-File Type Identification
 
- Step 4: Analyze Artifacts
-1.  Call Logs
-File: contacts2.db
+-Android Analyzer
 
-Recovered: 14 call entries (4 deleted)
+-Communications (SMS, Call Logs)
 
-Sample:
+-EXIF Metadata Parser
 
-Number: +1234567890
+-Web History
 
-Type: Outgoing
-
-Time: 2020-01-15 11:32:00
-
-2.  SMS Messages
-File: mmssms.db
-
-Recovered: 22 messages (6 deleted)
-
-Sample:
-
-"Meeting rescheduled. Send me the docs before 4."
-
-3. Location History
-File: location.db and wifi_cache
-
-Recovered:
-
-Latitude: -33.9249
-
-Longitude: 18.4241
-
-Time: 2020-01-16
-
-4.  Web & App History
-File Path: /data/data/com.android.chrome/
-
-Findings:
-
-Visited: mail.google.com, youtube.com, facebook.com
-
-Search History, Bookmarks, and Cache entries
-
-5.  Media Files
-Path: /sdcard/DCIM/Camera/
-
-Recovered: 42 images (5 deleted)
-
-Details:
-
-Some files had GPS EXIF data
-
-Recovered deleted selfie with location info
-
- Summary of Findings
-Artifact Type	Key Findings
-Call Logs	14 total, 4 deleted, various durations
-SMS Messages	22 messages, timestamps & content recovered
-GPS Data	At least 5 geolocations tied to app activity
-App Usage	WhatsApp, Chrome, Facebook identified
-Browser Data	Google search, Gmail access confirmed
-Media Files	Photos with EXIF GPS metadata found
-
- Digital Evidence Samples
-contacts2.db – Call logs
-
-mmssms.db – SMS/MMS content
-
-location.db – GPS coordinates
-
-History – Chrome web activity
-
-image_with_exif.jpg – Camera image with location
-
-packages.xml – Installed apps
-
- Forensic Integrity and Chain of Custody
-Autopsy operated in read-only mode
-
-MD5 & SHA-256 hashes generated for all recovered files
-
-Logs preserved in the case folder
-
-All extracted data was handled in a forensically sound manner
-
-No changes were made to the original disk image
-
- Skills Demonstrated
-Mobile image analysis and reporting
-
-Android artifact extraction and parsing
-
-SQLite database examination (SMS, Call logs)
-
-Web and media artifact investigation
-
-Virtual lab setup using VirtualBox & Ubuntu
-
-Evidence documentation and forensic integrity
-
- References
-Autopsy by SleuthKit
-
-Digital Forensic Research Workshop (DFRWS)
-
-Digital Corpora
-
-SQLite Browser
-
-1. Acquisition and Verification  
-- Acquired Android disk image in standard format  
-- Verified image using hash comparison to ensure integrity
-
-2. Image Loading  
-- Loaded image into forensic analysis tool  
-- Automatically parsed SMS, contacts, call logs, and app data
-
-3. Artifact Extraction  
-Artifact Type      Source                Description  
-SMS                Message databases     Sent and received texts  
-Call Logs          Log databases         Incoming and outgoing calls  
-Contacts           Address book file     Contact names and numbers  
-App Data           App directories       User activity in mobile apps  
-Browser History    History database      URLs and timestamps
-
-4. Database Analysis  
-- Opened SQLite databases  
-- Identified deleted rows and hidden entries  
-- Converted timestamps for timeline building
-
-5. Timeline Reconstruction  
-- Consolidated data across apps and system logs  
-- Ordered activities chronologically to identify behavior patterns
-
-6. Report Compilation  
-- Created a structured PDF report  
-- Included methodology, tools, evidence, screenshots, and analysis  
-- Noted data integrity methods used throughout
+-Keyword Search
 
 ---
 
-### Report Document  
-Filename: Android_Forensic_Investigation_Report.pdf  
-Content Includes:  
-- Summary and objectives  
-- Investigation procedure  
-- Extracted artifacts  
-- Timeline and observations  
-- Appendices with hashes and screenshots
+### Evidence Analysis
+#### Call Logs
+-File: contacts2.db
+
+-Total entries recovered: 14 (including 4 deleted)
+
+-Sample entry:
+
+-Number: +1234567890
+
+-Type: Outgoing
+
+-Timestamp: 2020-01-15 11:32:00
+
+#### SMS Messages
+-File: mmssms.db
+
+-Total messages recovered: 22 (6 deleted)
 
 ---
+
+#### Location History
+-Files: location.db, wifi_cache
+
+-Coordinates found: -33.9249, 18.4241
+
+-Timestamp: 2020-01-16
+
+#### Browser and App History
+-Path: /data/data/com.android.chrome/
+
+#### Findings:
+
+-Visited sites: mail.google.com, youtube.com, facebook.com
+
+-Recovered search terms, cache files, and browsing history
+
+#### Media Files
+-Path: /sdcard/DCIM/Camera/
+
+-Recovered 42 images (5 deleted)
+
+-EXIF metadata revealed timestamps and GPS coordinates
+
+-A deleted selfie was successfully recovered
+
+## Artifact Summary
+| Artifact Type   |   Description                                
+| --------------- | ------------------------------------------- |
+| Call Logs       | 14 records with caller ID and duration      |
+| SMS Messages    | 22 total messages (6 deleted)               |
+| GPS Coordinates | 5 accurate locations with timestamps        |
+| App Usage       | WhatsApp, Facebook, Chrome identified       |
+| Browser History | Full Chrome web history and cache           |
+| Media Files     | Photos and deleted files with EXIF metadata |
+
+
+---
+
+## Digital Evidence Collected
+-contacts2.db: Call log database
+
+-mmssms.db: Text message database
+
+-location.db: Location history database
+
+-Chrome History: Browser activity log
+
+-image_with_exif.jpg: Photo with GPS data
+
+-packages.xml: Installed apps list
+
+## Forensic Integrity
+-Operated on nexus.img in read-only mode
+
+-Generated MD5 and SHA-256 hashes for validation
+
+-Made no modifications to the original image
+
+-Captured an automatic audit trail through Autopsy
+
+-Maintained full compliance with digital forensics standards
+
+---
+
+## Forensic Integrity and Chain of Custody
+-Autopsy operated in read-only mode
+
+-MD5 & SHA-256 hashes generated for all recovered files
+
+-Logs preserved in the case folder
+
+-All extracted data was handled in a forensically sound manner
+
+-No changes were made to the original disk image
+
+---
+
+## Key Skills Demonstrated
+Virtual lab setup using Oracle VirtualBox and Ubuntu
+
+Installation and use of Autopsy and SleuthKit
+
+Acquisition and analysis of Android device images
+
+Artifact extraction and interpretation
+
+Professional reporting of digital evidence
+
+
+---
+
+## Conclusion
+This Android forensic investigation project demonstrated the ability to simulate real-world incident response using publicly available tools. The analysis of call logs, messages, locations, browser history, and app usage highlighted the effectiveness of Autopsy in recovering both live and deleted digital evidence.
+
+The investigation validated skills in setting up a virtual lab, using forensic tools, and adhering to chain of custody principles. It served as a strong foundation for further work in cybersecurity, governance, risk, compliance, and digital forensics.
 
 
 
