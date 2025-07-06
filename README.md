@@ -46,11 +46,7 @@ This project focuses on the forensic examination of an Android device image. The
 ---
 ### Step 2: Autopsy Installation
 
-Opened a terminal in Ubuntu and ran:
 
-```bash
-sudo apt update && sudo apt install autopsy sleuthkit -y
-autopsy
 
 ---
 ### Step 3: Image Acquisition and Loading
