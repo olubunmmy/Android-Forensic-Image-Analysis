@@ -31,8 +31,6 @@ The objectives of this project were to:
 | Virtual Machine | Ubuntu 25.04 LTS |
 | Virtualization | Oracle VirtualBox |
 | Forensic Tool   | Autopsy  + SleuthKit |
-| Disk Image      | `nexus.img` (Android 8 – Oreo) |
-
 
 
 ---
